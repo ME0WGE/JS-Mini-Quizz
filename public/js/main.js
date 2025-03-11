@@ -43,9 +43,13 @@ let question = prompt(`Question 1: ${question1}
 Options: ${options1}`);
 if (question != "Bruxelles") {
   alert("Nop!");
+  console.log("Question 1: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert(`Bravo!`);
+  console.log("Question 1: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 2
@@ -53,9 +57,13 @@ question = prompt(`Question 2: ${question2}
 Options: ${options2}`);
 if (question != "La Tour Eiffel") {
   alert("Nop!");
+  console.log("Question 2: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 2: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 3
@@ -63,9 +71,13 @@ question = prompt(`Question 3: ${question3}
 Options: ${options3}`);
 if (question != "Varsovie") {
   alert("Nop!");
+  console.log("Question 3: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 3: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 4
@@ -73,9 +85,13 @@ question = prompt(`Question 4: ${question4}
     Options: ${options4}`);
 if (question != "Finlande") {
   alert("Nop!");
+  console.log("Question 4: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 4: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 5
@@ -83,9 +99,13 @@ question = prompt(`Question 5: ${question5}
 Options: ${options5}`);
 if (question != "France") {
   alert("Nop!");
+  console.log("Question 5: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 5: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 6
@@ -93,9 +113,13 @@ question = prompt(`Question 6: ${question6}
 Options: ${options6}`);
 if (question != "Les frites") {
   alert("Nop!");
+  console.log("Question 6: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 6: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 7
@@ -103,9 +127,13 @@ question = prompt(`Question 7: ${question7}
 Options: ${options7}`);
 if (question != "La mer Baltique") {
   alert("Nop!");
+  console.log("Question 7: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 7: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 8
@@ -113,9 +141,13 @@ question = prompt(`Question 8: ${question8}
 Options: ${options8}`);
 if (question != "Le détroit du Bosphore") {
   alert("Nop!");
+  console.log("Question 8: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 8: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 9
@@ -123,9 +155,13 @@ question = prompt(`Question 9: ${question9}
 Options: ${options9}`);
 if (question != "La mer Méditerranée") {
   alert("Nop!");
+  console.log("Question 9: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 9: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 // Question 10
@@ -133,9 +169,14 @@ question = prompt(`Question 10: ${question10}
 Options: ${options10}`);
 if (question != "Finlande") {
   alert("Nop!");
+  console.log("Question 10: Nop!");
+  console.log(`Score: ${score}`);
 } else {
   score++;
   alert("Bravo!");
+  console.log("Question 10: Bravo!");
+  console.log(`Score: ${score}`);
 }
 
 alert(`Score Final: ${score}`);
+console.log(`Score Final: ${score}`);
