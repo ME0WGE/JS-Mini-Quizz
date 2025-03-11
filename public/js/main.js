@@ -1,10 +1,3 @@
-/*
-Logic of the program:
- -  Stock 10 questions in an array
- -  Score of 10 system
- -  5 countries
-*/
-
 const question1 = "Quelle est la capitale de la Belgique?";
 const options1 = "Paris, Bruxelles, Amsterdam, Berlin";
 
