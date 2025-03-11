@@ -40,6 +40,8 @@ const question10 =
   "Lequel de ces pays est connu pour ses nombreux lacs et saunas?";
 const options10 = "France, Belgique, Turquie, Finlande";
 
+let score = 0;
+
 // Code
 alert("Bienvenue dans le Quizz sur les Pays!");
 
@@ -48,6 +50,9 @@ let question = prompt(`Question 1: ${question1}
 Options: ${options1}`);
 if (question != "Bruxelles") {
   alert("Nop!");
+} else {
+  score++;
+  alert(`Bravo!`);
 }
 
 // Question 2
@@ -55,11 +60,89 @@ question = prompt(`Question 2: ${question2}
 Options: ${options2}`);
 if (question != "La Tour Eiffel") {
   alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
 }
 
 // Question 3
-question = prompt(`Question 2: ${question2}
-Options: ${options2}`);
-if (question != "La Tour Eiffel") {
+question = prompt(`Question 3: ${question3}
+Options: ${options3}`);
+if (question != "Varsovie") {
   alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
 }
+
+// Question 4
+question = prompt(`Question 4: ${question4}
+    Options: ${options4}`);
+if (question != "Finlande") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 5
+question = prompt(`Question 5: ${question5}
+Options: ${options5}`);
+if (question != "France") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 6
+question = prompt(`Question 6: ${question6}
+Options: ${options6}`);
+if (question != "Les frites") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 7
+question = prompt(`Question 7: ${question7}
+Options: ${options7}`);
+if (question != "La mer Baltique") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 8
+question = prompt(`Question 8: ${question8}
+Options: ${options8}`);
+if (question != "Le détroit du Bosphore") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 9
+question = prompt(`Question 9: ${question9}
+Options: ${options9}`);
+if (question != "La mer Méditerranée") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+// Question 10
+question = prompt(`Question 10: ${question10}
+Options: ${options10}`);
+if (question != "Finlande") {
+  alert("Nop!");
+} else {
+  score++;
+  alert("Bravo!");
+}
+
+alert(`Score Final: ${score}`);
