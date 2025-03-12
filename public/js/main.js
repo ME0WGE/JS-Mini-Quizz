@@ -1,5 +1,5 @@
 const question1 = "Quelle est la capitale de la Belgique?";
-const options1 = "Paris, Bruxelles, Amsterdam, Berlin";
+const options1 = ["Paris", "Bruxelles", "Amsterdam", "Berlin"];
 
 const question2 = "Quel monument emblématique se trouve à Paris, en France?";
 const options2 = "Big Ben, La Tour Eiffel, La Sagrada Familia, Le Colisée";
@@ -36,11 +36,12 @@ const options10 = "France, Belgique, Turquie, Finlande";
 // Quizz variables
 let title = document.querySelector(".title");
 let question = document.querySelector(".question");
-let options = document.querySelector(".options");
+let indice = document.querySelector(".indice");
 let btn1 = document.querySelector(".btn1");
 let btn2 = document.querySelector(".btn2");
 let btn3 = document.querySelector(".btn3");
 let btn4 = document.querySelector(".btn4");
+let btn5 = document.querySelector(".btn5");
 let quesionCount = document.querySelector(".question-count");
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
@@ -51,4 +52,18 @@ let score = 0;
 
 // Question 1
 question.innerHTML = `Question 1: ${question1}`;
-options.innerHTML = `Options: ${options1}`;
+indice.innerHTML = `Indice:`;
+indice.hidden = true;
+
+btn1.innerHTML = `${options1[0]}`;
+btn2.innerHTML = `${options1[1]}`;
+btn3.innerHTML = `${options1[2]}`;
+btn4.innerHTML = `${options1[3]}`;
+btn5.innerHTML = `Indice`;
+
+btn5.addEventListener("click", () => {
+  btn1.classList.add("btn-secondary");
+  btn2.classList.add("btn-warning");
+  btn3.classList.add("btn-warning");
+  btn4.classList.add("btn-secondary");
+});
