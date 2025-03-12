@@ -37,11 +37,18 @@ const options10 = "France, Belgique, Turquie, Finlande";
 let title = document.querySelector(".title");
 let question = document.querySelector(".question");
 let options = document.querySelector(".options");
-let btn = document.querySelector("button");
+let btn1 = document.querySelector(".btn1");
+let btn2 = document.querySelector(".btn2");
+let btn3 = document.querySelector(".btn3");
+let btn4 = document.querySelector(".btn4");
 let quesionCount = document.querySelector(".question-count");
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
 //-----------------------------------------------------------------//
 // let userInput = prompt("Saisissez votre nom d'utilisateur")
-title.innerHTML = `Bienvenue, ${userInput}`;
+// title.innerHTML = `Bienvenue, ${userInput}`;
+
+// Question 1
+question.innerHTML = `Question 1: ${question1}`;
+options.innerHTML = `Options: ${options1}`;
