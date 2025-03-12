@@ -32,6 +32,7 @@ const options9 =
 const question10 =
   "Lequel de ces pays est connu pour ses nombreux lacs et saunas?";
 const options10 = "France, Belgique, Turquie, Finlande";
+
 //-----------------------------------------------------------------//
 // Quizz variables
 let title = document.querySelector(".title");
@@ -45,9 +46,11 @@ let btn5 = document.querySelector(".btn5");
 let btn6 = document.querySelector(".btn6");
 let add_btn = document.createElement("button");
 let quesionCount = document.querySelector(".question-count");
+
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
+
 //-----------------------------------------------------------------//
 // Functions
 function indiceButton(btn1, btn2, btn3, btn4) {
@@ -57,9 +60,9 @@ function indiceButton(btn1, btn2, btn3, btn4) {
     btn3.classList.add("btn-warning");
     btn4.classList.add("btn-warning");
     btn5.remove();
-    btn6.hidden = false;
   });
 }
+
 function btnResponse(optionNumber) {
   btn1.innerHTML = `${optionNumber[0]}`;
   btn2.innerHTML = `${optionNumber[1]}`;
@@ -67,6 +70,7 @@ function btnResponse(optionNumber) {
   btn4.innerHTML = `${optionNumber[3]}`;
   btn5.innerHTML = `Indice`;
 }
+
 function btnGagnant(btn1, btn2, btn3, btn4) {
   btn1.addEventListener("click", () => {
     result.innerHTML = "BRAVOOO!";
@@ -80,6 +84,7 @@ function btnGagnant(btn1, btn2, btn3, btn4) {
     btn6.hidden = false;
   });
 }
+
 function btnPerdant(btn1, btn2, btn3, btn4) {
   btn1.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
@@ -93,8 +98,10 @@ function btnPerdant(btn1, btn2, btn3, btn4) {
     btn6.hidden = false;
   });
 }
+//-----------------------------------------------------------------//
 
-// let userInput = prompt("Saisissez votre nom d'utilisateur")
+// GAME
+// let userInput = prompt("Saisissez votre nom d'utilisateur");
 // title.innerHTML = `Bienvenue, ${userInput}`;
 scoreCounter.innerHTML = score;
 result.hidden = true;
@@ -103,11 +110,6 @@ btn6.hidden = true;
 question.innerHTML = `Question 1: ${question1}`;
 btnResponse(options1);
 indiceButton(btn1, btn4, btn2, btn3);
-
-// btnGagnant(btn2);
-// btnPerdant(btn1);
-// btnPerdant(btn3);
-// btnPerdant(btn4);
 
 if (btnGagnant(btn2, btn1, btn3, btn4)) {
   score = score + 1;
