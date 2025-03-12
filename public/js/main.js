@@ -54,6 +54,7 @@ function indiceButton(btn1, btn2, btn3, btn4) {
     btn2.classList.add("btn-secondary");
     btn3.classList.add("btn-warning");
     btn4.classList.add("btn-warning");
+    btn5.remove();
   });
 }
 function btnResponse(optionNumber) {
@@ -63,20 +64,25 @@ function btnResponse(optionNumber) {
   btn4.innerHTML = `${optionNumber[3]}`;
   btn5.innerHTML = `Indice`;
 }
+function btnGagnant(btn) {
+  btn.addEventListener("click", () => {
+    result.innerHTML = "BRAVOOO!";
+    result.hidden = false;
+  });
+}
+function btnPerdant(btn) {
+  btn.addEventListener("click", () => {
+    result.innerHTML = "NUUUUUL!";
+    result.hidden = false;
+  });
+}
 
 // let userInput = prompt("Saisissez votre nom d'utilisateur")
 // title.innerHTML = `Bienvenue, ${userInput}`;
-
+result.hidden = true;
 // Question 1
 question.innerHTML = `Question 1: ${question1}`;
 btnResponse(options1);
 indiceButton(btn1, btn4, btn2, btn3);
 
-btn2.addEventListener("click", () => {
-  result.innerHTML = "BRAVOOO!";
-  result.hidden = false;
-  
-});
-
-result.innerHTML = `BRAVO OU NUUUL`;
-result.hidden = true;
+btnGagnant(btn2);
