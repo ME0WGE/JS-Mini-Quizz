@@ -53,7 +53,7 @@ let score = 0;
 
 //-----------------------------------------------------------------//
 // Functions
-function indiceButton(btn1, btn2, btn3, btn4) {
+function btnIndice(btn1, btn2, btn3, btn4) {
   btn5.addEventListener("click", () => {
     btn1.classList.add("btn-secondary");
     btn2.classList.add("btn-secondary");
@@ -109,7 +109,7 @@ btn6.hidden = true;
 // Question 1
 question.innerHTML = `Question 1: ${question1}`;
 btnResponse(options1);
-indiceButton(btn1, btn4, btn2, btn3);
+btnIndice(btn1, btn4, btn2, btn3);
 
 if (btnGagnant(btn2, btn1, btn3, btn4)) {
   score = score + 1;
