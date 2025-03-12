@@ -32,11 +32,11 @@ const options9 =
 const question10 =
   "Lequel de ces pays est connu pour ses nombreux lacs et saunas?";
 const options10 = "France, Belgique, Turquie, Finlande";
-
+//-----------------------------------------------------------------//
 // Quizz variables
 let title = document.querySelector(".title");
 let question = document.querySelector(".question");
-let indice = document.querySelector(".indice");
+let result = document.querySelector(".result");
 let btn1 = document.querySelector(".btn1");
 let btn2 = document.querySelector(".btn2");
 let btn3 = document.querySelector(".btn3");
@@ -47,7 +47,7 @@ let quesionCount = document.querySelector(".question-count");
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
 //-----------------------------------------------------------------//
-// FUNCTIONS
+// Functions
 function indiceButton(btn1, btn2, btn3, btn4) {
   btn5.addEventListener("click", () => {
     btn1.classList.add("btn-secondary");
@@ -69,8 +69,14 @@ function btnResponse(optionNumber) {
 
 // Question 1
 question.innerHTML = `Question 1: ${question1}`;
-indice.innerHTML = `Indice:`;
-indice.hidden = true;
-
 btnResponse(options1);
 indiceButton(btn1, btn4, btn2, btn3);
+
+btn2.addEventListener("click", () => {
+  result.innerHTML = "BRAVOOO!";
+  result.hidden = false;
+  
+});
+
+result.innerHTML = `BRAVO OU NUUUL`;
+result.hidden = true;
