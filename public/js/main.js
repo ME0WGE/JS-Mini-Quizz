@@ -47,6 +47,23 @@ let quesionCount = document.querySelector(".question-count");
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
 //-----------------------------------------------------------------//
+// FUNCTIONS
+function indiceButton(btn1, btn2, btn3, btn4) {
+  btn5.addEventListener("click", () => {
+    btn1.classList.add("btn-secondary");
+    btn2.classList.add("btn-secondary");
+    btn3.classList.add("btn-warning");
+    btn4.classList.add("btn-warning");
+  });
+}
+function btnResponse(optionNumber) {
+  btn1.innerHTML = `${optionNumber[0]}`;
+  btn2.innerHTML = `${optionNumber[1]}`;
+  btn3.innerHTML = `${optionNumber[2]}`;
+  btn4.innerHTML = `${optionNumber[3]}`;
+  btn5.innerHTML = `Indice`;
+}
+
 // let userInput = prompt("Saisissez votre nom d'utilisateur")
 // title.innerHTML = `Bienvenue, ${userInput}`;
 
@@ -55,15 +72,5 @@ question.innerHTML = `Question 1: ${question1}`;
 indice.innerHTML = `Indice:`;
 indice.hidden = true;
 
-btn1.innerHTML = `${options1[0]}`;
-btn2.innerHTML = `${options1[1]}`;
-btn3.innerHTML = `${options1[2]}`;
-btn4.innerHTML = `${options1[3]}`;
-btn5.innerHTML = `Indice`;
-
-btn5.addEventListener("click", () => {
-  btn1.classList.add("btn-secondary");
-  btn2.classList.add("btn-warning");
-  btn3.classList.add("btn-warning");
-  btn4.classList.add("btn-secondary");
-});
+btnResponse(options1);
+indiceButton(btn1, btn4, btn2, btn3);
