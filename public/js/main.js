@@ -42,6 +42,8 @@ let btn2 = document.querySelector(".btn2");
 let btn3 = document.querySelector(".btn3");
 let btn4 = document.querySelector(".btn4");
 let btn5 = document.querySelector(".btn5");
+let btn6 = document.querySelector(".btn6");
+let add_btn = document.createElement("button");
 let quesionCount = document.querySelector(".question-count");
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
@@ -55,6 +57,7 @@ function indiceButton(btn1, btn2, btn3, btn4) {
     btn3.classList.add("btn-warning");
     btn4.classList.add("btn-warning");
     btn5.remove();
+    btn6.hidden = false;
   });
 }
 function btnResponse(optionNumber) {
@@ -64,25 +67,51 @@ function btnResponse(optionNumber) {
   btn4.innerHTML = `${optionNumber[3]}`;
   btn5.innerHTML = `Indice`;
 }
-function btnGagnant(btn) {
-  btn.addEventListener("click", () => {
+function btnGagnant(btn1, btn2, btn3, btn4) {
+  btn1.addEventListener("click", () => {
     result.innerHTML = "BRAVOOO!";
     result.hidden = false;
+
+    btn1.remove();
+    btn2.remove();
+    btn3.remove();
+    btn4.remove();
+    btn5.remove();
+    btn6.hidden = false;
   });
 }
-function btnPerdant(btn) {
-  btn.addEventListener("click", () => {
+function btnPerdant(btn1, btn2, btn3, btn4) {
+  btn1.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
     result.hidden = false;
+
+    btn1.remove();
+    btn2.remove();
+    btn3.remove();
+    btn4.remove();
+    btn5.remove();
+    btn6.hidden = false;
   });
 }
 
 // let userInput = prompt("Saisissez votre nom d'utilisateur")
 // title.innerHTML = `Bienvenue, ${userInput}`;
+scoreCounter.innerHTML = score;
 result.hidden = true;
+btn6.hidden = true;
 // Question 1
 question.innerHTML = `Question 1: ${question1}`;
 btnResponse(options1);
 indiceButton(btn1, btn4, btn2, btn3);
 
-btnGagnant(btn2);
+// btnGagnant(btn2);
+// btnPerdant(btn1);
+// btnPerdant(btn3);
+// btnPerdant(btn4);
+
+if (btnGagnant(btn2, btn1, btn3, btn4)) {
+  score = score + 1;
+} else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+} else if (btnPerdant(btn3, btn4, btn2, btn1)) {
+} else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+}
