@@ -33,5 +33,11 @@
 //   "Lequel de ces pays est connu pour ses nombreux lacs et saunas?";
 // const options10 = "France, Belgique, Turquie, Finlande";
 
-// let score = 0;
+let title = document.querySelector(".title")
+let question = document.querySelector(".question")
+let options = document.querySelector(".options")
+let btn = document.querySelector("button")
+let quesionCount = document.querySelector(".question-count")
+
+let score = 0;
 
