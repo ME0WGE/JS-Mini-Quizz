@@ -66,7 +66,7 @@ let questionCount = document.querySelector(".question-count");
 
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
-let score = 0;
+var score = 0;
 
 //-----------------------------------------------------------------//
 // Functions
