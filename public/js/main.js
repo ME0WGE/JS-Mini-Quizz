@@ -169,7 +169,7 @@ btn6.addEventListener("click", () => {
     btn4.hidden = false;
     btn5.hidden = false;
 
-    questionCount.innerHTML = "Question 2";
+    questionCount.innerHTML = "Question 3";
     result.hidden = true;
     btn6.hidden = true;
 
@@ -191,7 +191,7 @@ btn6.addEventListener("click", () => {
       btn4.hidden = false;
       btn5.hidden = false;
 
-      questionCount.innerHTML = "Question 2";
+      questionCount.innerHTML = "Question 4";
       result.hidden = true;
       btn6.hidden = true;
 
@@ -213,7 +213,7 @@ btn6.addEventListener("click", () => {
         btn4.hidden = false;
         btn5.hidden = false;
 
-        questionCount.innerHTML = "Question 2";
+        questionCount.innerHTML = "Question 5";
         result.hidden = true;
         btn6.hidden = true;
 
@@ -235,7 +235,7 @@ btn6.addEventListener("click", () => {
           btn4.hidden = false;
           btn5.hidden = false;
 
-          questionCount.innerHTML = "Question 2";
+          questionCount.innerHTML = "Question 6";
           result.hidden = true;
           btn6.hidden = true;
 
@@ -257,7 +257,7 @@ btn6.addEventListener("click", () => {
             btn4.hidden = false;
             btn5.hidden = false;
 
-            questionCount.innerHTML = "Question 2";
+            questionCount.innerHTML = "Question 7";
             result.hidden = true;
             btn6.hidden = true;
 
@@ -279,7 +279,7 @@ btn6.addEventListener("click", () => {
               btn4.hidden = false;
               btn5.hidden = false;
 
-              questionCount.innerHTML = "Question 2";
+              questionCount.innerHTML = "Question 8";
               result.hidden = true;
               btn6.hidden = true;
 
@@ -301,7 +301,7 @@ btn6.addEventListener("click", () => {
                 btn4.hidden = false;
                 btn5.hidden = false;
 
-                questionCount.innerHTML = "Question 2";
+                questionCount.innerHTML = "Question 9";
                 result.hidden = true;
                 btn6.hidden = true;
 
@@ -323,7 +323,7 @@ btn6.addEventListener("click", () => {
                   btn4.hidden = false;
                   btn5.hidden = false;
 
-                  questionCount.innerHTML = "Question 2";
+                  questionCount.innerHTML = "Question 10";
                   result.hidden = true;
                   btn6.hidden = true;
 
