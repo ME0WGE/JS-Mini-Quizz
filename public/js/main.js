@@ -130,6 +130,8 @@ btnResponse(options1);
 btnIndice(btn1, btn4, btn2, btn3);
 
 if (btnGagnant(btn2, btn1, btn3, btn4)) {
+  score++;
+  scoreCounter.innerHTML = score;
 } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
 } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
 } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -152,6 +154,8 @@ btn6.addEventListener("click", () => {
   btn6.hidden = true;
 
   if (btnGagnant(btn2, btn1, btn3, btn4)) {
+    score++;
+    console.log();
   } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
   } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
   } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -174,6 +178,8 @@ btn6.addEventListener("click", () => {
     btn6.hidden = true;
 
     if (btnGagnant(btn3, btn1, btn2, btn4)) {
+      score++;
+      console.log(scoreCounter.innerHTML);
     } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
     } else if (btnPerdant(btn2, btn4, btn3, btn1)) {
     } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -196,6 +202,8 @@ btn6.addEventListener("click", () => {
       btn6.hidden = true;
 
       if (btnGagnant(btn2, btn1, btn3, btn4)) {
+        score++;
+        console.log(scoreCounter.innerHTML);
       } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
       } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
       } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -218,6 +226,8 @@ btn6.addEventListener("click", () => {
         btn6.hidden = true;
 
         if (btnGagnant(btn3, btn1, btn2, btn4)) {
+          score++;
+          console.log(scoreCounter.innerHTML);
         } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
         } else if (btnPerdant(btn2, btn4, btn3, btn1)) {
         } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -240,6 +250,8 @@ btn6.addEventListener("click", () => {
           btn6.hidden = true;
 
           if (btnGagnant(btn3, btn1, btn2, btn4)) {
+            score++;
+            console.log(scoreCounter.innerHTML);
           } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
           } else if (btnPerdant(btn2, btn4, btn3, btn1)) {
           } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -262,6 +274,8 @@ btn6.addEventListener("click", () => {
             btn6.hidden = true;
 
             if (btnGagnant(btn3, btn1, btn2, btn4)) {
+              score++;
+              console.log(scoreCounter.innerHTML);
             } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
             } else if (btnPerdant(btn2, btn4, btn3, btn1)) {
             } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -284,6 +298,8 @@ btn6.addEventListener("click", () => {
               btn6.hidden = true;
 
               if (btnGagnant(btn2, btn1, btn2, btn4)) {
+                score++;
+                console.log(scoreCounter.innerHTML);
               } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
               } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
               } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -306,6 +322,8 @@ btn6.addEventListener("click", () => {
                 btn6.hidden = true;
 
                 if (btnGagnant(btn1, btn1, btn2, btn4)) {
+                  score++;
+                  console.log(scoreCounter.innerHTML);
                 } else if (btnPerdant(btn2, btn1, btn3, btn4)) {
                 } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
                 } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
@@ -328,6 +346,8 @@ btn6.addEventListener("click", () => {
                   btn6.hidden = true;
 
                   if (btnGagnant(btn4, btn1, btn2, btn4)) {
+                    score++;
+                    console.log(scoreCounter.innerHTML);
                   } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
                   } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
                   } else if (btnPerdant(btn2, btn3, btn4, btn1)) {
