@@ -156,4 +156,188 @@ btn6.addEventListener("click", () => {
   } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
   } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
   }
+
+  btn6.addEventListener("click", () => {
+    // Question 3
+    question.innerHTML = `${question3}`;
+    btnResponse(options3);
+    btnIndice(btn1, btn4, btn2, btn3);
+
+    btn1.hidden = false;
+    btn2.hidden = false;
+    btn3.hidden = false;
+    btn4.hidden = false;
+    btn5.hidden = false;
+
+    questionCount.innerHTML = "Question 2";
+    result.hidden = true;
+    btn6.hidden = true;
+
+    if (btnGagnant(btn3, btn1, btn2, btn4)) {
+    } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+    } else if (btnPerdant(btn2, btn4, btn2, btn1)) {
+    } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+    }
+
+    btn6.addEventListener("click", () => {
+      // Question 4
+      question.innerHTML = `${question4}`;
+      btnResponse(options4);
+      btnIndice(btn1, btn4, btn2, btn3);
+
+      btn1.hidden = false;
+      btn2.hidden = false;
+      btn3.hidden = false;
+      btn4.hidden = false;
+      btn5.hidden = false;
+
+      questionCount.innerHTML = "Question 2";
+      result.hidden = true;
+      btn6.hidden = true;
+
+      if (btnGagnant(btn2, btn1, btn3, btn4)) {
+      } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+      } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
+      } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+      }
+
+      btn6.addEventListener("click", () => {
+        // Question 5
+        question.innerHTML = `${question5}`;
+        btnResponse(options5);
+        btnIndice(btn1, btn4, btn2, btn3);
+
+        btn1.hidden = false;
+        btn2.hidden = false;
+        btn3.hidden = false;
+        btn4.hidden = false;
+        btn5.hidden = false;
+
+        questionCount.innerHTML = "Question 2";
+        result.hidden = true;
+        btn6.hidden = true;
+
+        if (btnGagnant(btn3, btn1, btn2, btn4)) {
+        } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+        } else if (btnPerdant(btn2, btn4, btn2, btn1)) {
+        } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+        }
+
+        btn6.addEventListener("click", () => {
+          // Question 6
+          question.innerHTML = `${question6}`;
+          btnResponse(options6);
+          btnIndice(btn1, btn4, btn2, btn3);
+
+          btn1.hidden = false;
+          btn2.hidden = false;
+          btn3.hidden = false;
+          btn4.hidden = false;
+          btn5.hidden = false;
+
+          questionCount.innerHTML = "Question 2";
+          result.hidden = true;
+          btn6.hidden = true;
+
+          if (btnGagnant(btn3, btn1, btn2, btn4)) {
+          } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+          } else if (btnPerdant(btn2, btn4, btn2, btn1)) {
+          } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+          }
+
+          btn6.addEventListener("click", () => {
+            // Question 7
+            question.innerHTML = `${question7}`;
+            btnResponse(options7);
+            btnIndice(btn1, btn4, btn2, btn3);
+
+            btn1.hidden = false;
+            btn2.hidden = false;
+            btn3.hidden = false;
+            btn4.hidden = false;
+            btn5.hidden = false;
+
+            questionCount.innerHTML = "Question 2";
+            result.hidden = true;
+            btn6.hidden = true;
+
+            if (btnGagnant(btn3, btn1, btn2, btn4)) {
+            } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+            } else if (btnPerdant(btn2, btn4, btn2, btn1)) {
+            } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+            }
+
+            btn6.addEventListener("click", () => {
+              // Question 8
+              question.innerHTML = `${question8}`;
+              btnResponse(options8);
+              btnIndice(btn1, btn4, btn2, btn3);
+
+              btn1.hidden = false;
+              btn2.hidden = false;
+              btn3.hidden = false;
+              btn4.hidden = false;
+              btn5.hidden = false;
+
+              questionCount.innerHTML = "Question 2";
+              result.hidden = true;
+              btn6.hidden = true;
+
+              if (btnGagnant(btn2, btn1, btn2, btn4)) {
+              } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+              } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
+              } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+              }
+
+              btn6.addEventListener("click", () => {
+                // Question 9
+                question.innerHTML = `${question9}`;
+                btnResponse(options9);
+                btnIndice(btn1, btn4, btn2, btn3);
+
+                btn1.hidden = false;
+                btn2.hidden = false;
+                btn3.hidden = false;
+                btn4.hidden = false;
+                btn5.hidden = false;
+
+                questionCount.innerHTML = "Question 2";
+                result.hidden = true;
+                btn6.hidden = true;
+
+                if (btnGagnant(btn1, btn1, btn2, btn4)) {
+                } else if (btnPerdant(btn2, btn2, btn3, btn4)) {
+                } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
+                } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
+                }
+
+                btn6.addEventListener("click", () => {
+                  // Question 10
+                  question.innerHTML = `${question10}`;
+                  btnResponse(options10);
+                  btnIndice(btn1, btn4, btn2, btn3);
+
+                  btn1.hidden = false;
+                  btn2.hidden = false;
+                  btn3.hidden = false;
+                  btn4.hidden = false;
+                  btn5.hidden = false;
+
+                  questionCount.innerHTML = "Question 2";
+                  result.hidden = true;
+                  btn6.hidden = true;
+
+                  if (btnGagnant(btn4, btn1, btn2, btn4)) {
+                  } else if (btnPerdant(btn1, btn2, btn3, btn4)) {
+                  } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
+                  } else if (btnPerdant(btn2, btn3, btn4, btn1)) {
+                  }
+                });
+              });
+            });
+          });
+        });
+      });
+    });
+  });
 });
