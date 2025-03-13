@@ -66,19 +66,19 @@ let questionCount = document.querySelector(".question-count");
 
 // Score variables
 let scoreCounter = document.querySelector(".score-counter");
-var score = 0;
+let score = 0;
 
 //-----------------------------------------------------------------//
 // Functions
-function btnIndice(btnSecondary, btnSecondary, btnWarning, btnWarning) {
+function btnIndice(btnSecondary1, btnSecondary2, btnWarning1, btnWarning2) {
   btn5.replaceWith(btn5.cloneNode(true));
   btn5 = document.querySelector(".btn5");
 
   btn5.addEventListener("click", () => {
-    btnSecondary.classList.add("btn-secondary");
-    btnSecondary.classList.add("btn-secondary");
-    btnWarning.classList.add("btn-warning");
-    btnWarning.classList.add("btn-warning");
+    btnSecondary1.classList.add("btn-secondary");
+    btnSecondary2.classList.add("btn-secondary");
+    btnWarning1.classList.add("btn-warning");
+    btnWarning2.classList.add("btn-warning");
     btn5.remove();
   });
 }
@@ -101,7 +101,13 @@ function btnResponse(optionNumber) {
 }
 
 function btnGagnant(btnGagnant, btn2, btn3, btn4) {
+  btnGagnant.replaceWith(btnGagnant.cloneNode(true));
+  btnGagnant = document.querySelector("." + btnGagnant.className.split(" ")[1]);
+
   btnGagnant.addEventListener("click", () => {
+    score += 1;
+    scoreCounter.innerHTML = `${score}`;
+
     result.innerHTML = "BRAVOOO!";
     result.hidden = false;
 
@@ -115,6 +121,9 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4) {
 }
 
 function btnPerdant(btnPerdant, btn2, btn3, btn4) {
+  btnPerdant.replaceWith(btnPerdant.cloneNode(true));
+  btnPerdant = document.querySelector("." + btnPerdant.className.split(" ")[1]);
+
   btnPerdant.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
     result.hidden = false;
@@ -127,6 +136,45 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4) {
     btn6.hidden = false;
   });
 }
+
+function questionSelector(questionText, options, btnGG, questionNum) {
+  questionCount.innerHTML = `Question ${questionNum}`;
+  question.innerHTML = questionText;
+
+  resetButtons();
+  btnResponse(options);
+  result.hidden = true;
+  btn6.hidden = true;
+
+  btn1.hidden = false;
+  btn2.hidden = false;
+  btn3.hidden = false;
+  btn4.hidden = false;
+
+  btnIndice(btn1, btn2, btn3, btn4);
+
+  if (btnGG === 1) {
+    btnGagnant(btn1, btn2, btn3, btn4);
+    btnPerdant(btn2, btn1, btn3, btn4);
+    btnPerdant(btn3, btn1, btn2, btn4);
+    btnPerdant(btn4, btn1, btn2, btn3);
+  } else if (btnGG === 2) {
+    btnPerdant(btn1, btn2, btn3, btn4);
+    btnGagnant(btn2, btn1, btn3, btn4);
+    btnPerdant(btn3, btn1, btn2, btn4);
+    btnPerdant(btn4, btn1, btn2, btn3);
+  } else if (btnGG === 3) {
+    btnPerdant(btn1, btn2, btn3, btn4);
+    btnPerdant(btn2, btn1, btn3, btn4);
+    btnGagnant(btn3, btn1, btn2, btn4);
+    btnPerdant(btn4, btn1, btn2, btn3);
+  } else if (btnGG === 4) {
+    btnPerdant(btn1, btn2, btn3, btn4);
+    btnPerdant(btn2, btn1, btn3, btn4);
+    btnPerdant(btn3, btn1, btn2, btn4);
+    btnGagnant(btn4, btn1, btn2, btn3);
+  }
+}
 //-----------------------------------------------------------------//
 
 // GAME
@@ -134,4 +182,5 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4) {
 // let userInput = prompt("Saisissez votre nom d'utilisateur");
 // title.innerHTML = `Bienvenue, ${userInput}`;
 
-// Question
+// Score
+scoreCounter.innerHTML = `${score}`;
