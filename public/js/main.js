@@ -118,14 +118,16 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4) {
 //-----------------------------------------------------------------//
 
 // GAME
+// username input
 // let userInput = prompt("Saisissez votre nom d'utilisateur");
 // title.innerHTML = `Bienvenue, ${userInput}`;
+
+// Question 1
 scoreCounter.innerHTML = score;
 questionCount.innerHTML = "Question 1";
 result.hidden = true;
 btn6.hidden = true;
 
-// Question 1
 question.innerHTML = `${question1}`;
 btnResponse(options1);
 btnIndice(btn1, btn4, btn2, btn3);
