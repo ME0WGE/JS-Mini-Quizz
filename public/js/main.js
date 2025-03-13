@@ -123,7 +123,7 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4) {
 // title.innerHTML = `Bienvenue, ${userInput}`;
 
 // Question 1
-scoreCounter.innerHTML = score;
+scoreCounter.innerHTML = `${score}`;
 questionCount.innerHTML = "Question 1";
 result.hidden = true;
 btn6.hidden = true;
