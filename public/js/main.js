@@ -1,3 +1,4 @@
+// Questions constants
 const question1 = "Quelle est la capitale de la Belgique?";
 const options1 = ["Paris", "Bruxelles", "Amsterdam", "Berlin"];
 
@@ -134,7 +135,6 @@ if (btnGagnant(btn2, btn1, btn3, btn4)) {
 } else if (btnPerdant(btn3, btn4, btn2, btn1)) {
 } else if (btnPerdant(btn4, btn3, btn2, btn1)) {
 }
-
 btn6.addEventListener("click", () => {
   // Question 2
   question.innerHTML = `${question2}`;
