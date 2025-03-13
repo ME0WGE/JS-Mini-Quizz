@@ -70,21 +70,26 @@ var score = 0;
 
 //-----------------------------------------------------------------//
 // Functions
-function btnIndice(btn1, btn2, btn3, btn4) {
+function btnIndice(btnSecondary, btnSecondary, btnWarning, btnWarning) {
+  btn5.replaceWith(btn5.cloneNode(true));
+  btn5 = document.querySelector(".btn5");
+
   btn5.addEventListener("click", () => {
-    btn1.classList.add("btn-secondary");
-    btn2.classList.add("btn-secondary");
-    btn3.classList.add("btn-warning");
-    btn4.classList.add("btn-warning");
+    btnSecondary.classList.add("btn-secondary");
+    btnSecondary.classList.add("btn-secondary");
+    btnWarning.classList.add("btn-warning");
+    btnWarning.classList.add("btn-warning");
     btn5.remove();
   });
 }
 
-function resetColor(btn1, btn2, btn3, btn4) {
+function resetButtons() {
   btn1.className = "btn btn1";
   btn2.className = "btn btn2";
   btn3.className = "btn btn3";
   btn4.className = "btn btn4";
+
+  btn5.hidden = false;
 }
 
 function btnResponse(optionNumber) {
