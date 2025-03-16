@@ -110,6 +110,8 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
     btn3.hidden = true;
     btn4.hidden = true;
 
+    // Nécessaire pour faire fonctionner la question 10
+    // Il n'y a pas de bouton "continuer" après la question 9, alors s'il n'est pas présent dans le paramètre, le message du fin de jeu sera affiché
     if (btnContinuer) {
       btnContinuer.hidden = false;
     } else {
@@ -135,7 +137,7 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
     btn3.hidden = true;
     btn4.hidden = true;
 
-    // Nécéssaire pour faire fonctionner la question 10
+    // Nécessaire pour faire fonctionner la question 10
     // Il n'y a pas de bouton "continuer" après la question 9, alors s'il n'est pas présent dans le paramètre, le message du fin de jeu sera affiché
     if (btnContinuer) {
       btnContinuer.hidden = false;
@@ -147,7 +149,7 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
     }
   });
 }
-// Fonction qui contient la logique du jeu
+// Fonction qui regroupe la logique du jeu
 function questionSelector(
   questionText,
   options,
@@ -155,7 +157,7 @@ function questionSelector(
   questionNum,
   btnContinuer
 ) {
-  // Pour faire foncionner le score correctement, il fallait que je fasse en sorte de ne pas stacker les EventListeners appelés plusieurs fois à chaque fois que la fonction est utilisée
+  // Pour faire foncionner le score correctement et éviter que plusieurs incrémentations inutiles se produisent, il fallait que je fasse en sorte de ne pas stacker les EventListeners à chaque fois que la fonction est appelée
   btn1.replaceWith(btn1.cloneNode(true));
   btn2.replaceWith(btn2.cloneNode(true));
   btn3.replaceWith(btn3.cloneNode(true));
@@ -166,7 +168,7 @@ function questionSelector(
   btn3 = document.querySelector(".btn3");
   btn4 = document.querySelector(".btn4");
 
-  questionCount.innerHTML = `Question ${questionNum}`; // Afficher quelle est le numéro de la question actuelle
+  questionCount.innerHTML = `Question ${questionNum}`; // Afficher le numéro de la question actuelle
   question.innerHTML = questionText; // Afficher le contenu de la variable "question"
 
   btnResponse(options);
@@ -179,8 +181,8 @@ function questionSelector(
   btn3.hidden = false;
   btn4.hidden = false;
 
-  // Choix du bouton gagnant à spécifier dans le paramètre de la fonction
-  // Il y a 4 boutons "réponse". En fonction du numéro spécifié dans le paramètre "btnGG" dans questionSelector(), le programme choisira la combinaison de boutons qui correspond à 1 bouton gagnant et 3 boutons perdants.
+  // Choix de la combinaison à envoyer dans le paramètre de la fonction
+  // Il y a 4 boutons d'option de réponse durant le jeu. En fonction du numéro spécifié dans le paramètre "btnGG" dans questionSelector(), le programme choisira la combinaison de boutons qui correspond à 1 bouton gagnant et 3 boutons perdants.
   if (btnGG === 1) {
     btnGagnant(btn1, btn2, btn3, btn4, btnContinuer);
     btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
