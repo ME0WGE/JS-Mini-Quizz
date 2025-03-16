@@ -1,4 +1,8 @@
-// Questions
+//-----------------------------------------------------------------||
+//                                                                 ||
+//                          Questions                              ||
+//                                                                 ||
+//-----------------------------------------------------------------||
 const question1 = "Quelle est la capitale de la Belgique?";
 const options1 = ["Paris", "Bruxelles", "Amsterdam", "Berlin"];
 
@@ -50,8 +54,11 @@ const question10 =
   "Lequel de ces pays est connu pour ses nombreux lacs et saunas?";
 const options10 = ["France", "Belgique", "Turquie", "Finlande"];
 
-//-----------------------------------------------------------------//
-// Variables
+//-----------------------------------------------------------------||
+//                                                                 ||
+//                          Variables                              ||
+//                                                                 ||
+//-----------------------------------------------------------------||
 let title = document.querySelector(".title");
 let question = document.querySelector(".question");
 let result = document.querySelector(".result");
@@ -73,8 +80,11 @@ let add_btn = document.createElement("button");
 let questionCount = document.querySelector(".question-count");
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
-//-----------------------------------------------------------------//
-// Functions
+//-----------------------------------------------------------------||
+//                                                                 ||
+//                          Functions                              ||
+//                                                                 ||
+//-----------------------------------------------------------------||
 // Associer les options de la collection à chaque bouton
 function btnResponse(optionNumber) {
   btn1.innerHTML = `${optionNumber[0]}`;
@@ -91,6 +101,9 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
 
     result.innerHTML = "BRAVOOO!";
     result.hidden = false;
+
+    result.classList.remove("bg-danger", "bg-success"); // Je m'assure de réinitialiser le backgroundcolor
+    result.classList.add("bg-success"); // Je rajoute le backgroundcolor
 
     btnGagnant.hidden = true;
     btn2.hidden = true;
@@ -113,6 +126,9 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
   btnPerdant.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
     result.hidden = false;
+
+    result.classList.remove("bg-danger", "bg-success"); // Je m'assure de réinitialiser le backgroundcolor
+    result.classList.add("bg-danger"); // Je rajoute le backgroundcolor
 
     btnPerdant.hidden = true;
     btn2.hidden = true;
@@ -187,6 +203,12 @@ function questionSelector(
     btnGagnant(btn4, btn1, btn2, btn3, btnContinuer);
   }
 }
+//-----------------------------------------------------------------||
+//                                                                 ||
+//                          Game                                   ||
+//                                                                 ||
+//-----------------------------------------------------------------||
+
 // Cacher les boutons "continuer"
 btn7.hidden = true;
 btn8.hidden = true;
@@ -197,8 +219,6 @@ btn12.hidden = true;
 btn13.hidden = true;
 btn14.hidden = true;
 btn15.hidden = true;
-//-----------------------------------------------------------------//
-// GAME
 
 // Demander le nom d'utilisateur dans un prompt, puis afficher cette valeur dans le titre
 let userInput = prompt("Saisissez votre nom d'utilisateur");
