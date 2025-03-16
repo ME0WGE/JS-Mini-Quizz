@@ -97,7 +97,14 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
     btn3.hidden = true;
     btn4.hidden = true;
 
-    btnContinuer.hidden = false;
+    if (btnContinuer) {
+      btnContinuer.hidden = false;
+    } else {
+      // Afficher le message de Fin du jeu
+      result.hidden = true;
+      questionCount.innerHTML = "PARTIE TERMINÉE";
+      question.innerHTML = `La partie est terminée! Votre score est de ${score}/10`;
+    }
   });
 }
 // Fonction qui prends en premier paramètre le bouton associé à la mauvaise réponse
@@ -112,7 +119,16 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
     btn3.hidden = true;
     btn4.hidden = true;
 
-    btnContinuer.hidden = false;
+    // Nécéssaire pour faire fonctionner la question 10
+    // Il n'y a pas de bouton "continuer" après la question 9, alors s'il n'est pas présent dans le paramètre, le message du fin de jeu sera affiché
+    if (btnContinuer) {
+      btnContinuer.hidden = false;
+    } else {
+      // Afficher le message de Fin du jeu
+      result.hidden = true;
+      questionCount.innerHTML = "PARTIE TERMINÉE";
+      question.innerHTML = `La partie est terminée! Votre score est de ${score}/10`;
+    }
   });
 }
 // Fonction qui contient la logique du jeu
@@ -123,6 +139,17 @@ function questionSelector(
   questionNum,
   btnContinuer
 ) {
+  // Pour faire foncionner le score correctement, il fallait que je fasse en sorte de ne pas stacker les EventListeners appelés plusieurs fois à chaque fois que la fonction est utilisée
+  btn1.replaceWith(btn1.cloneNode(true));
+  btn2.replaceWith(btn2.cloneNode(true));
+  btn3.replaceWith(btn3.cloneNode(true));
+  btn4.replaceWith(btn4.cloneNode(true));
+  // Je réassigne à nouveau les boutons aux variables
+  btn1 = document.querySelector(".btn1");
+  btn2 = document.querySelector(".btn2");
+  btn3 = document.querySelector(".btn3");
+  btn4 = document.querySelector(".btn4");
+
   questionCount.innerHTML = `Question ${questionNum}`; // Afficher quelle est le numéro de la question actuelle
   question.innerHTML = questionText; // Afficher le contenu de la variable "question"
 
@@ -224,13 +251,7 @@ btn13.addEventListener("click", () => {
 });
 // Question 10
 btn14.addEventListener("click", () => {
-  questionSelector(question10, options10, 4, 10, null);
-  btn14.remove();
-  btn1.remove();
-  btn2.remove();
-  btn3.remove();
-  btn4.remove();
+  questionSelector(question10, options10, 4, 10);
 
-  questionCount.innerHTML = "PARTIE TERMINÉE";
-  question.innerHTML = `La partie est terminée! Votre score est de ${score}/10`;
+  btn14.remove();
 });
