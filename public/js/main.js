@@ -61,6 +61,15 @@ let btn3 = document.querySelector(".btn3");
 let btn4 = document.querySelector(".btn4");
 let btn5 = document.querySelector(".btn5");
 let btn6 = document.querySelector(".btn6");
+let btn7 = document.querySelector(".btn7");
+let btn8 = document.querySelector(".btn8");
+let btn9 = document.querySelector(".btn9");
+let btn10 = document.querySelector(".btn10");
+let btn11 = document.querySelector(".btn11");
+let btn12 = document.querySelector(".btn12");
+let btn13 = document.querySelector(".btn13");
+let btn14 = document.querySelector(".btn14");
+let btn15 = document.querySelector(".btn15");
 let add_btn = document.createElement("button");
 let questionCount = document.querySelector(".question-count");
 
@@ -97,7 +106,7 @@ function btnResponse(optionNumber) {
   btn5.innerHTML = `Indice`;
 }
 
-function btnGagnant(btnGagnant, btn2, btn3, btn4) {
+function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
   btnGagnant.addEventListener("click", () => {
     score++;
     scoreCounter.innerHTML = `${score}`;
@@ -110,11 +119,12 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4) {
     btn3.hidden = true;
     btn4.hidden = true;
     btn5.hidden = true;
-    btn6.hidden = false;
+
+    btnContinuer.hidden = false;
   });
 }
 
-function btnPerdant(btnPerdant, btn2, btn3, btn4) {
+function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
   btnPerdant.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
     result.hidden = false;
@@ -124,11 +134,18 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4) {
     btn3.hidden = true;
     btn4.hidden = true;
     btn5.hidden = true;
-    btn6.hidden = false;
+
+    btnContinuer.hidden = false;
   });
 }
 
-function questionSelector(questionText, options, btnGG, questionNum) {
+function questionSelector(
+  questionText,
+  options,
+  btnGG,
+  questionNum,
+  btnContinuer
+) {
   questionCount.innerHTML = `Question ${questionNum}`;
   question.innerHTML = questionText;
 
@@ -143,27 +160,37 @@ function questionSelector(questionText, options, btnGG, questionNum) {
   btn4.hidden = false;
 
   if (btnGG === 1) {
-    btnGagnant(btn1, btn2, btn3, btn4);
-    btnPerdant(btn2, btn1, btn3, btn4);
-    btnPerdant(btn3, btn1, btn2, btn4);
-    btnPerdant(btn4, btn1, btn2, btn3);
+    btnGagnant(btn1, btn2, btn3, btn4, btnContinuer);
+    btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
+    btnPerdant(btn3, btn1, btn2, btn4, btnContinuer);
+    btnPerdant(btn4, btn1, btn2, btn3, btnContinuer);
   } else if (btnGG === 2) {
-    btnPerdant(btn1, btn2, btn3, btn4);
-    btnGagnant(btn2, btn1, btn3, btn4);
-    btnPerdant(btn3, btn1, btn2, btn4);
-    btnPerdant(btn4, btn1, btn2, btn3);
+    btnPerdant(btn1, btn2, btn3, btn4, btnContinuer);
+    btnGagnant(btn2, btn1, btn3, btn4, btnContinuer);
+    btnPerdant(btn3, btn1, btn2, btn4, btnContinuer);
+    btnPerdant(btn4, btn1, btn2, btn3, btnContinuer);
   } else if (btnGG === 3) {
-    btnPerdant(btn1, btn2, btn3, btn4);
-    btnPerdant(btn2, btn1, btn3, btn4);
-    btnGagnant(btn3, btn1, btn2, btn4);
-    btnPerdant(btn4, btn1, btn2, btn3);
+    btnPerdant(btn1, btn2, btn3, btn4, btnContinuer);
+    btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
+    btnGagnant(btn3, btn1, btn2, btn4, btnContinuer);
+    btnPerdant(btn4, btn1, btn2, btn3, btnContinuer);
   } else if (btnGG === 4) {
-    btnPerdant(btn1, btn2, btn3, btn4);
-    btnPerdant(btn2, btn1, btn3, btn4);
-    btnPerdant(btn3, btn1, btn2, btn4);
-    btnGagnant(btn4, btn1, btn2, btn3);
+    btnPerdant(btn1, btn2, btn3, btn4, btnContinuer);
+    btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
+    btnPerdant(btn3, btn1, btn2, btn4, btnContinuer);
+    btnGagnant(btn4, btn1, btn2, btn3, btnContinuer);
   }
 }
+
+btn7.hidden = true;
+btn8.hidden = true;
+btn9.hidden = true;
+btn10.hidden = true;
+btn11.hidden = true;
+btn12.hidden = true;
+btn13.hidden = true;
+btn14.hidden = true;
+btn15.hidden = true;
 //-----------------------------------------------------------------//
 
 // GAME
@@ -174,7 +201,61 @@ function questionSelector(questionText, options, btnGG, questionNum) {
 // Score
 scoreCounter.innerHTML = `${score}`;
 
+// Question 1
 btnIndice(btn1, btn4, btn2, btn3);
-questionSelector(question1, options1, 2, 1);
-
-btn6.addEventListener("click", () => {});
+questionSelector(question1, options1, 2, 1, btn6);
+resetButtons();
+// Question 2
+btn6.addEventListener("click", () => {
+  // btnIndice(btn1, btn4, btn2, btn3);
+  questionSelector(question2, options2, 2, 2, btn7);
+  btn6.remove();
+});
+// Question 3
+btn7.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question3, options3, 3, 3, btn8);
+  btn7.remove();
+});
+// Question 4
+btn8.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question4, options4, 2, 4, btn9);
+  btn8.remove();
+});
+// Question 5
+btn9.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question5, options5, 3, 5, btn10);
+  btn9.remove();
+});
+// Question 6
+btn10.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question6, options6, 3, 6, btn11);
+  btn10.remove();
+});
+// Question 7
+btn11.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question7, options7, 3, 7, btn12);
+  btn11.remove();
+});
+// Question 8
+btn12.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question8, options8, 2, 8, btn13);
+  btn12.remove();
+});
+// Question 9
+btn13.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question9, options9, 1, 9, btn14);
+  btn13.remove();
+});
+// Question 10
+btn14.addEventListener("click", () => {
+  // btnIndice(btn1, btn3, btn2, btn4);
+  questionSelector(question10, options10, 4, 10, null);
+  btn14.remove();
+});
