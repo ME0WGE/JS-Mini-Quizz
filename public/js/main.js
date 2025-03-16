@@ -1,4 +1,4 @@
-// Questions constants
+// Questions
 const question1 = "Quelle est la capitale de la Belgique?";
 const options1 = ["Paris", "Bruxelles", "Amsterdam", "Berlin"];
 
@@ -51,7 +51,7 @@ const question10 =
 const options10 = ["France", "Belgique", "Turquie", "Finlande"];
 
 //-----------------------------------------------------------------//
-// Quizz variables
+// Variables
 let title = document.querySelector(".title");
 let question = document.querySelector(".question");
 let result = document.querySelector(".result");
@@ -71,27 +71,19 @@ let btn14 = document.querySelector(".btn14");
 let btn15 = document.querySelector(".btn15");
 let add_btn = document.createElement("button");
 let questionCount = document.querySelector(".question-count");
-
-// Score variables
 let scoreCounter = document.querySelector(".score-counter");
 let score = 0;
-
 //-----------------------------------------------------------------//
 // Functions
-function resetButtons() {
-  btn1.className = "btn btn1";
-  btn2.className = "btn btn2";
-  btn3.className = "btn btn3";
-  btn4.className = "btn btn4";
-}
-
+// Associer les options de la collection à chaque bouton
 function btnResponse(optionNumber) {
   btn1.innerHTML = `${optionNumber[0]}`;
   btn2.innerHTML = `${optionNumber[1]}`;
   btn3.innerHTML = `${optionNumber[2]}`;
   btn4.innerHTML = `${optionNumber[3]}`;
 }
-
+// Fonction qui prends en premier paramètre le bouton associé à la bonne réponse
+// En plus de cela, la fonction prends en dernier paramètre le bouton "continuer" pour l'afficher
 function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
   btnGagnant.addEventListener("click", () => {
     score++;
@@ -108,7 +100,8 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4, btnContinuer) {
     btnContinuer.hidden = false;
   });
 }
-
+// Fonction qui prends en premier paramètre le bouton associé à la mauvaise réponse
+// En plus de cela, la fonction prends en pdernier aramètre le bouton "continuer" pour l'afficher
 function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
   btnPerdant.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
@@ -122,7 +115,7 @@ function btnPerdant(btnPerdant, btn2, btn3, btn4, btnContinuer) {
     btnContinuer.hidden = false;
   });
 }
-
+// Fonction qui contient la logique du jeu
 function questionSelector(
   questionText,
   options,
@@ -130,11 +123,11 @@ function questionSelector(
   questionNum,
   btnContinuer
 ) {
-  questionCount.innerHTML = `Question ${questionNum}`;
-  question.innerHTML = questionText;
+  questionCount.innerHTML = `Question ${questionNum}`; // Afficher quelle est le numéro de la question actuelle
+  question.innerHTML = questionText; // Afficher le contenu de la variable "question"
 
-  resetButtons();
   btnResponse(options);
+
   result.hidden = true;
   btn6.hidden = true;
 
@@ -143,6 +136,7 @@ function questionSelector(
   btn3.hidden = false;
   btn4.hidden = false;
 
+  // Choix du bouton gagnant
   if (btnGG === 1) {
     btnGagnant(btn1, btn2, btn3, btn4, btnContinuer);
     btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
@@ -165,7 +159,7 @@ function questionSelector(
     btnGagnant(btn4, btn1, btn2, btn3, btnContinuer);
   }
 }
-
+// Cacher les boutons "continuer"
 btn7.hidden = true;
 btn8.hidden = true;
 btn9.hidden = true;
@@ -176,9 +170,9 @@ btn13.hidden = true;
 btn14.hidden = true;
 btn15.hidden = true;
 //-----------------------------------------------------------------//
-
 // GAME
-// username input
+
+// Demander le nom d'utilisateur dans un prompt et le récupérer dans le titre
 // let userInput = prompt("Saisissez votre nom d'utilisateur");
 // title.innerHTML = `Bienvenue, ${userInput}`;
 
@@ -187,7 +181,6 @@ scoreCounter.innerHTML = `${score}`;
 
 // Question 1
 questionSelector(question1, options1, 2, 1, btn6);
-resetButtons();
 // Question 2
 btn6.addEventListener("click", () => {
   questionSelector(question2, options2, 2, 2, btn7);
@@ -232,4 +225,11 @@ btn13.addEventListener("click", () => {
 btn14.addEventListener("click", () => {
   questionSelector(question10, options10, 4, 10, null);
   btn14.remove();
+  btn1.remove();
+  btn2.remove();
+  btn3.remove();
+  btn4.remove();
+
+  questionCount.innerHTML = "PARTIE TERMINÉE";
+  question.innerHTML = `La partie est terminée! Votre score est de ${score}/10`;
 });
