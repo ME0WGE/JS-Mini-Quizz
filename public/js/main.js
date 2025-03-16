@@ -136,7 +136,8 @@ function questionSelector(
   btn3.hidden = false;
   btn4.hidden = false;
 
-  // Choix du bouton gagnant
+  // Choix du bouton gagnant à spécifier dans le paramètre de la fonction
+  // Il y a 4 boutons "réponse". En fonction du numéro spécifié dans le paramètre "btnGG" dans questionSelector(), le programme choisira la combinaison de boutons qui correspond à 1 bouton gagnant et 3 boutons perdants.
   if (btnGG === 1) {
     btnGagnant(btn1, btn2, btn3, btn4, btnContinuer);
     btnPerdant(btn2, btn1, btn3, btn4, btnContinuer);
