@@ -201,8 +201,8 @@ btn15.hidden = true;
 // GAME
 
 // Demander le nom d'utilisateur dans un prompt, puis afficher cette valeur dans le titre
-// let userInput = prompt("Saisissez votre nom d'utilisateur");
-// title.innerHTML = `Bienvenue, ${userInput}`;
+let userInput = prompt("Saisissez votre nom d'utilisateur");
+title.innerHTML = `Bienvenue, ${userInput}`;
 
 // Score
 scoreCounter.innerHTML = `${score}`;
