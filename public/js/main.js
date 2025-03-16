@@ -173,7 +173,7 @@ btn15.hidden = true;
 //-----------------------------------------------------------------//
 // GAME
 
-// Demander le nom d'utilisateur dans un prompt et le récupérer dans le titre
+// Demander le nom d'utilisateur dans un prompt, puis afficher cette valeur dans le titre
 // let userInput = prompt("Saisissez votre nom d'utilisateur");
 // title.innerHTML = `Bienvenue, ${userInput}`;
 
