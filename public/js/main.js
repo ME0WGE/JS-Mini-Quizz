@@ -71,9 +71,6 @@ let score = 0;
 //-----------------------------------------------------------------//
 // Functions
 function btnIndice(btnSecondary1, btnSecondary2, btnWarning1, btnWarning2) {
-  btn5.replaceWith(btn5.cloneNode(true));
-  btn5 = document.querySelector(".btn5");
-
   btn5.addEventListener("click", () => {
     btnSecondary1.classList.add("btn-secondary");
     btnSecondary2.classList.add("btn-secondary");
@@ -101,11 +98,8 @@ function btnResponse(optionNumber) {
 }
 
 function btnGagnant(btnGagnant, btn2, btn3, btn4) {
-  btnGagnant.replaceWith(btnGagnant.cloneNode(true));
-  btnGagnant = document.querySelector("." + btnGagnant.className.split(" ")[1]);
-
   btnGagnant.addEventListener("click", () => {
-    score += 1;
+    score++;
     scoreCounter.innerHTML = `${score}`;
 
     result.innerHTML = "BRAVOOO!";
@@ -121,9 +115,6 @@ function btnGagnant(btnGagnant, btn2, btn3, btn4) {
 }
 
 function btnPerdant(btnPerdant, btn2, btn3, btn4) {
-  btnPerdant.replaceWith(btnPerdant.cloneNode(true));
-  btnPerdant = document.querySelector("." + btnPerdant.className.split(" ")[1]);
-
   btnPerdant.addEventListener("click", () => {
     result.innerHTML = "NUUUUUL!";
     result.hidden = false;
@@ -150,8 +141,6 @@ function questionSelector(questionText, options, btnGG, questionNum) {
   btn2.hidden = false;
   btn3.hidden = false;
   btn4.hidden = false;
-
-  btnIndice(btn1, btn2, btn3, btn4);
 
   if (btnGG === 1) {
     btnGagnant(btn1, btn2, btn3, btn4);
@@ -184,3 +173,8 @@ function questionSelector(questionText, options, btnGG, questionNum) {
 
 // Score
 scoreCounter.innerHTML = `${score}`;
+
+btnIndice(btn1, btn4, btn2, btn3);
+questionSelector(question1, options1, 2, 1);
+
+btn6.addEventListener("click", () => {});
